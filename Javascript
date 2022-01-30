@@ -1,0 +1,115 @@
+Strings
+string.indexOf($caracter, $opcional) -> devuelve la posicion del caracter en el string, 				si no existe duvuelve -1
+	El parametro opcional indica desde donde empieza a buscar el caracter
+
+string.lastIndexOf($caracter, $opcional) -> lo mismo que indexOf pero empieza a 				buscar desde el final del string
+
+string.length() -> el nuevo de caracteres del string contando los espacios
+string.toUpperCase() -> convierte a mayusculas el string
+string.toLowerCase() -> convierte a minusculas el string
+numero.toFixed($variable) -> el parametro que se le pasa es el numero de decimales 	que quieres que aparezcan. Ejemplo 10.254789.toFixed() = 10.25, si colocas 0 en el parametro no devuelve ningun decimal
+
+n
+numero.toLocaleString() -> convierte la variable a stringumero.toLocaleString() -> convierte la variable a string
+
+numero.toString() -> lo mismo que tolocaleString
+
+string.trim() -> elimina los espacios del principio y el final del string
+
+string.replace($antiguostring, nuevostring)
+
+string.split(separador, numeroDeElementosQueDevolvera) -> convierte un string en un 		array de elementos
+	si colocas como separador un string espacio (" ") separa el string por palabra
+	si colocas un string vacio ("") separa por letra
+	si coloca un caracter ("i") -> separa por ese caracter
+
+string.substring()
+string.substr()
+string.slice()
+
+.startsWith() -> devuelve true or false, pregunta si una cadena empieza con cierto caracter o fragmento
+.endsWith() -> si termina
+.includes() -> pregunta si existe ese caracter en la cadenas
+
+==arreglos==
+
+arreglo.length <- devuelve el numero de elementos de un arreglo
+arreglo.indexOf() <- se coloca un valor como parametro y devuelve su posicion en el 		arreglo, si no existe en el arreglo, devuelve -1
+
+---- se pasa como parametros los elementos que vas a agregar
+y devuelve el nuevo length-----
+
+arreglo.push(el1, el2) <- agrega al final
+arreglo.unshift(el1, el2) <- agrega al comienzo
+---------------------------------------------------------------------------------
+
+----Eliminar un solo elemento-----
+No van con parametros
+Devuelven el elemento eliminado
+
+.pop() <- elimina al final
+.shift() <- elimina al inicio
+--------------------------------
+
+.join('separador') <- convierte un array a un string, el separador es el como apareceran separados en la cadena, el separador por defecto es una coma (,)
+
+-----------------
+
+.splice(a, b, items) <- reemplaza o quita elementos
+	a <- el indice desde donde comienza a hacer la operacion
+	b <- el numero de elementos que va a tomar, it
+	items <- los elementos que va a añadir (para añadir elementos es 		obligatorio este parametro)
+
+.slice(a, b, items) <- parecido pero obtiene los elementos seleccionados y crea un nuevo arreglo
+Ejemplo: [1, 2, 3, 4, 5].slice(2, 4) = [3, 4]
+
+-------------------------------
+.find(callback) <- devuelve el primer elemento que cumple con la condicion
+	ejemplo
+	let arr = [1, 2, 3, 4, 5]
+	let num = arr.find(el => el > 3)
+	resultado 4
+.findIndex(callback) <- lo mismo que .find() pero devuelve el indice del 	elemento en el arreglo
+-------------------------------------------------------------------------------
+
+Iteradores
+Son objetos que contienen un metodo next()
+Ese método devuelve un objeto con dos propiedades
+que son value, done
+
+.keys()
+.values()
+.entries()
+
+-----------------
+Operadores para objetos
+delete <- elimina una propiedad
+in <- devuelve true si existe la propiedad en el objeto o en la cadena de prototipos
+
+.hasOwnProperty() <- devuelve true si existe la propiedad en el objeto y no lo herede
+---------------------------------------------------------------------
+Copiar un objeto
+let objeto2 = Object.assing({}, objeto); <- creas una copia de un objeto
+
+
+-----------------------------------------------------------------------------------------------------------------
+OBJETO DATE
+
+let date = new Date() <- Devuelve una fecha con mucha informacion, metodos
+
+date.setFullYear() <- setea un año
+date.setMinutes() <- setea los minutos
+date.setHours() <- setea horas
+date.setDate() <- setea la fecha del mes
+date.setMonth() <- setea un mes
+
+
+date.getFullYear() <- devuelve el año
+date.getMinutes() <-  devuelve minutos
+date.getHours() <- devuelve horas en formato 24 horas
+date.getseconds() <- devuelve lo segundos actuales
+date.getMilliseconds() <- devuelven los milisegundos actuales
+date.getDate() <- devuelve la fecha del mes
+date.getMonth() <- devuelve un mes donde 0 es enero
+date.getDay() <- devuelve un mes donde 0 es domingo
+date.getTime() <- devuelve milisegundos desde el 1 de enero de 1970
