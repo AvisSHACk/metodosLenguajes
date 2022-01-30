@@ -1,0 +1,76 @@
+range(100) <- genera 100 numeros consecutivos
+range(2, 8, 3) <- genera numeros desde el 2 hasta el 8 pero de incrementa de 3 en 3
+Funciones y metodos de un array
+len(array, string) <-- devuelve la longitud del array o numero de caracteres del string contando el espacio
+del array[indice] <-- elimina un elemento del arreglo
+	numeros = [111, 7, 2, 1]
+	print(numeros[-1]) <- 1 (si colocamos -1 el programa devuelve el ultimo elemento de la lista)
+list.append(value) <-- agrega un elemento al final de la lista
+list.insert(location, value) <-- agrega un elemento en cualquier lugar de la lista y las demas las desplaza
+list.sort() <-- ordena la lista en orden creciente
+list.reverse() <-- ordena la lista al revez de su posiciion original
+list[start;end] <--- devuelve el contenido de la lista (hace lo mismo que la funcion slices de js)
+list[:] <- copia todo el contenido de la lista, todos sus elementos
+myList = [10, 8, 6, 4, 2]
+newList = myList[1:-1] <-- [8, 6, 4]
+
+myList = [10, 8, 6, 4, 2]
+newList = myList[-1:1] <--- []
+
+elemen in mylist <--- verifica si un elemento esta en la lista 
+element not in myList <--- Verifica si un elemento no esta en la lista
+
+====diccionarios==
+diccionario.["clave"] = "valor" <---- agrega un nuvo par de clave valor
+diccionario.key() <- devulve las palabras clabes del diccionario
+sorted(diccionario.key()) <- ordena las palabras clave
+diccionario.items() <- devuelve una lista de tuplas donde cada tupla es un par de clave valor
+diccionario.update = ({"clave" : "valor}") <---- agrega un nuvo par de clave valor
+
+del diccionario.["clave"] <--- elimina un par clave valor
+diccionario.popitem() <-- elimina el ultimo de la lista de dicccionaro PD: en versiones anteriores al 3.6.7 este metodo
+borra un elemento aleatorio
+
+Metodos de strings
+
+ord('string') <- para conocer el punto de codigo ascii de un caracter especifico
+chr(number) <- si conoce el codigo ascii y desea obtener el caracter correspondiente
+'string'.index('caracter') <--  devuelve la posicion del caracter, si no existe da value error
+list('string') <- toma un string y devuelve todos los caracteres como una lista
+'string'.capitalize() <- devuelve el siguiente resultado: la primera letra esta en mayuscula, lo demas en minuscula
+'string'.center(10, '*') <-- centra el string de acuerdo al numero del primer parametro, el segundo parametro remplaza los espacios por el caracter que pongas
+'string'.endswith("string") <-- devuelve true si termina con el caracter o cadena puesto en los parentesis
+string.find('caracter') <- devuelve el indice del caracter, de lo contrario devuelve -1
+	.find('caracter', start, argumento) <- argumento: sera el argumento que no se tomara en cuenta
+string.isalnum() <-- true si tiene caracteres o numeros, del o contrario false
+string.isalpha() < true si solo tiene caracteres de lo contrario false
+string.isdigit() < true si solo tiene numeros de lo contrario false
+string.islower() < true si solo tiene letras minusculas de lo cotrario false
+string.isspace() < true si solo tiene espacios en blanco de lo contrario false
+string.isupper() < true si solo tiene letras mayusculas de lo contrario false
+'separador'.join('subcadenas') <-- une las subcadenas en una cadena, si tiene separador se separa por el separador
+string.lower() < devuelve la misma cadena pero los caracteres en mayuscula las convierte en miniscula
+string.sltrip() <- devuelve la cadena pero sin los posibles espacios iniciales
+	"www.cisco.com".lstrip("w.") <- devuelve la cadena pero sin los caracteres especificados en el parametro
+string.replace('string1', 'string2', 1) <- remplaza lo que has puesto en string1 por string2 y el tercer parametro indica el numero de reemplazos, si pones 1 asi haya mas opciones para reemplazar, solo reemplazara el primero que necuentre
+string.rfind() <. lo mismo que find pero empieza su busquedad desde la derecha
+string.rstrip() <- hace lo mismo que lstrip pero empieza desde la derecha
+string.split() <- devuelve subcadenas en un array
+string.startwith() <- verifica si una cadena empieza con lo que has puesto como parametro en string
+string.strip() <- elimina loss espacios en blanco tanto de la derecha e izquierda
+string.swapcase() <-- cambia las mayusculas por minusculas y minusculas por mayusculas
+string.title() <- convierte la primera letra de cada subcadena a mayuscula
+string.upper() <- devuele una cadena en mayuscula todos los caracteres
+sorted(lista) <-- devuelve la lista pero ordenada en orden alfabetico pero no modifica el original
+lista.sort() <- hace lo mismo pero si afecta a la lista original
+
+Programacion orientada a objetos
+
+hasattr(clase o objeto, atributo encerrado en comillas) <<- devuelve true si la propiedad o atributo existe de lo contrario da false
+
+Generadores:
+list = [1 if x % 2 == 0 else 0 for x in range(10)] <- devuelve una lista
+genr = (1 if x % 2 == 0 else 0 for x in range(10)) <- devuelve un generador
+
+lambda x: x + 1 <- funcion lambda
+map(function, list) <- devuelve un objeto iterable
